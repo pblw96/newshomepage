@@ -1,5 +1,13 @@
+const isProduction = process.env.NODE_ENV === "production";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  basePath: isProduction ? "/newshomepage" : "",
+  assetPrefix: isProduction ? "/newshomepage" : "",
+  images: {
+    unoptimized: true, // Disable default image optimization
+  },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
@@ -26,8 +34,7 @@ const nextConfig = {
     fileLoaderRule.exclude = /\.svg$/i;
 
     return config;
-  },
-  output: "export"
+  }
 };
 
 export default nextConfig;
