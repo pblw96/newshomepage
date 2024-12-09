@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { latestArticles, topArticles } from "../data/mockData";
 import Nav from "@/components/Nav";
+import prefix from "@/utils/prefix";
 
 export default function Home() {
   return (
@@ -27,8 +28,8 @@ const FeaturedArticle = () => {
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-6">
           <picture className="w-full h-full">
-            <source srcSet={"/static/images/image-web-3-desktop.jpg"} media="(min-width:1024px)" />
-            <img className="w-full" src={"/static/images/image-web-3-mobile.jpg"} alt="A pattern of colorful three-dimensional shapes" />
+            <source srcSet={`${prefix}/static/images/image-web-3-desktop.jpg`} media="(min-width:1024px)" />
+            <img className="w-full" src={`${prefix}/static/images/image-web-3-mobile.jpg`} alt="A pattern of colorful three-dimensional shapes" />
           </picture>
           <div className="flex flex-col gap-6 lg:flex-row">
             <h2 className="text-4xl font-extrabold sm:text-5xl lg:flex-1">The Bright Future of Web 3.0?</h2>
