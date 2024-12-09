@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+    /*aliases*/
+    --color-primary: 5 85 63;
+    --color-primary-variant: 35 77 62;
+    --color-neutral-white: 36 100 99;
+    --color-neutral-light-gray: 233 8 79;
+    --color-neutral-gray: 236 13 42;
+    --color-neutral-dark-gray: 240 100 5;
+
+    /*mapped*/
+    --color-bg-default: var(--color-neutral-white);
+    --color-bg-inverse: var(--color-neutral-dark-gray);
+    --color-bg-fill: var(--color-primary);
+    --color-bg-fill-hover: var(--color-neutral-dark-gray);
+    --color-text-default: var(--color-neutral-dark-gray);
+    --color-text-secondary: var(--color-neutral-gray);
+    --color-text-default-inverse: var(--color-neutral-white);
+    --color-text-secondary-inverse: var(--color-neutral-light-gray);
+    --color-text-link: var(--color-neutral-dark-gray);
+    --color-text-link-hover: var(--color-primary);
+    --color-text-link-inverse: var(--color-neutral-white);
+    --color-text-link-inverse-hover: var(--color-primary-variant);
+    --color-text-nav-link: var(--color-neutral-gray);
+    --color-text-nav-link-hover: var(--color-primary);
+    --color-text-nav-link-active: var(--color-primary-variant);
+    --color-nav-bg: var(--color-neutral-white);
+    --color-text-brand: var(--color-primary);
+    --color-text-brand-variant: var(--color-primary-variant);
+    --color-text-on-bg-fill: var(--color-neutral-dark-gray);
+    --color-text-on-bg-fill-hover: var(--color-neutral-white);
+  }
+}
